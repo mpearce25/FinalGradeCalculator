@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.example.matt.finalgradecalculator"
+        applicationId "com.brainwaveapps.finalgradecalculator"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
