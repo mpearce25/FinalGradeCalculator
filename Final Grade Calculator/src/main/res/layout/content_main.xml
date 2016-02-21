@@ -62,13 +62,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Final Exam Weight (%)"
+        android:text="Exam Weight (%)"
         android:id="@+id/finalWeightLabel"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="33dp"
+        android:textColor="#212121"
         android:layout_below="@+id/desiredGradeText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#212121" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -83,23 +83,49 @@
         android:layout_alignStart="@+id/desiredGradeText"
         android:hint="Ex. 10" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Required Grade:"
-        android:id="@+id/requiredGradeLabel"
+        android:text="Calculate"
+        android:id="@+id/calculateButton"
+        android:layout_alignTop="@+id/clearButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/finalWeightText"
+        android:layout_toLeftOf="@+id/finalWeightText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clearButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="35dp" />
+        android:layout_toLeftOf="@+id/finalWeightText"
+        android:layout_toRightOf="@+id/calculateButton"
+        android:layout_toEndOf="@+id/calculateButton" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0.0%"
         android:id="@+id/requiredGradeResultLabel"
-        android:layout_below="@+id/requiredGradeLabel"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp" />
+        android:layout_marginTop="68dp"
+        android:textSize="40dp"
+        android:layout_below="@+id/calculateButton"
+        android:layout_alignLeft="@+id/finalWeightText"
+        android:layout_alignStart="@+id/finalWeightText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Required Score:"
+        android:id="@+id/requiredScoreLabel"
+        android:layout_alignBottom="@+id/requiredGradeResultLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
